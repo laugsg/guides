@@ -54,6 +54,7 @@ Installation over a Windows 10 to work with Ubuntu 18 console through WSL 2.
 2. Ubuntu 18 (powershell ha 2) : powershell or Microsoft Store
 
 **____ From Ubuntu console (update & upgrade) ___**
+
 3. [Docker](https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04) : `sudo apt install docker.io`
 4. GIT
 5. NVM
@@ -61,6 +62,7 @@ Installation over a Windows 10 to work with Ubuntu 18 console through WSL 2.
 7. build-essential
 
 **____ Setup cupo repo ___**
+
 8. set NVM version 8
 9. npm i
 10. npm i gulp-sass
@@ -68,12 +70,15 @@ Installation over a Windows 10 to work with Ubuntu 18 console through WSL 2.
     + sudo dockerd
 
 **____ Docker Compose ___**
+
 12. [Alternative Install : Linux](https://docs.docker.com/compose/install/#alternative-install-options)
 
 **____ vim /etc/hosts ___**
+
 13. 127.0.0.1 mongo redis
 
 **____ Permission To Use Port 80 ___**
+
 14. sudo apt-get install libcap2-bin
 15. sudo setcap cap_net_bind_service=+ep `readlink -f \`which node\``
 
