@@ -56,6 +56,7 @@ docker rmi $(docker images -a -q)
 ```
 
 ### How-To : update Git
+Get tehe lastest official package source from official `https://launchpad.net/~git-core/+archive/ubuntu/ppa`
 ```
 # get lastest official source
 sudo add-apt-repository ppa:git-core/ppa
@@ -64,6 +65,14 @@ sudo apt-get update
 # re-run installation
 sudo apt-get install git -y
 ```
+
+### Cupo Reborn Missing packages
+1. npm install -g typescript
+
+```
+npm install -g typescript
+```
+
 
 ## Deployment
 Data Delivery (Migrated) | Router (Not yet Migrated) |
