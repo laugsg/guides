@@ -49,6 +49,12 @@ npm i node-sass
 npm rebuild node-sass --force
 ```
 
+### Docker : remove images & containers
+```
+docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)
+docker rmi $(docker images -a -q)
+```
+
 ## Deployment
 Data Delivery (Migrated) | Router (Not yet Migrated) |
 |-|-|
