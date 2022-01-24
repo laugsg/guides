@@ -68,9 +68,24 @@ Both windows and WSL distro must be modified to include localhost address and th
 ### Missing packages
 1. npm i bootstrap
 2. npm i npm i @popperjs/core
+3. npm i static-type-js
+
+```
+npm i bootstrap @popperjs/core static-type-js
+```
 
 
+### Docker : remove images & containers
+```
+docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)
+docker rmi $(docker images -a -q)
+```
 
+### fsevents vs. chokidar : How to fix 'Unsupported platform for fsevents@1.2.9: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+chokidar is a wrapper for Linux-, Windows-, and Mac-specific filesystem-watching packages, of which `fsevents` is the Mac variant. 
 
+`chokidar` is being used to "watch" filesystem directories for "events" (like files being added). 
 
+Anything that uses `chokidar` is going to have `fsevents` as an optional dependency, this WARN message can be safely ignored, as chokidar supports all common desktop architectures.
 
+`npm audit fix` resolve all "high severity vulnerability" issues and contribute the resulting updated dependencies back to the given codebase.

@@ -55,6 +55,16 @@ docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)
 docker rmi $(docker images -a -q)
 ```
 
+### How-To : update Git
+```
+# get lastest official source
+sudo add-apt-repository ppa:git-core/ppa
+# update sistem
+sudo apt-get update
+# re-run installation
+sudo apt-get install git -y
+```
+
 ## Deployment
 Data Delivery (Migrated) | Router (Not yet Migrated) |
 |-|-|
