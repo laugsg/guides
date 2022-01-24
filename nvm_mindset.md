@@ -64,7 +64,10 @@ Both windows and WSL distro must be modified to include localhost address and th
 ```
 
 
-
+## Troubleshooting
+### Missing packages
+1. npm i bootstrap
+2. npm i npm i @popperjs/core
 
 
 
