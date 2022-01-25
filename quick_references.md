@@ -68,9 +68,10 @@ sudo apt-get install git -y
 
 ### Cupo Reborn Missing packages
 1. npm install -g typescript
-2. sudo apt install awscli
+2. [sudo apt install awscli ](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-version.html)
+3. npm i -g yarn
 ```
-npm install -g typescript
+npm install -g typescript yarn
 ```
 
 
