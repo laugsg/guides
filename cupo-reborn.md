@@ -1,6 +1,12 @@
 # CR notes for development
 Setup and run.
 
+## Partners Name
+The partner name's come from S3 folder name. Example:
+* kleine zeitung : 
+    1. shared repo clients.ts `kleinezeitungAT`
+    2. S3 bucket folder name `KleineZeitung` (same as vee `partner/[partner]`) 
+
 ## Setup
 AWS cli and daily permission access it's needed, plus readme instructions at [cupo-reborn repo](https://bitbucket.org/global-savings-group/cupo-reborn/src/master/)
 
