@@ -1,6 +1,9 @@
 # CR notes for development
 Setup and run.
 
+## Partners id
+For now, shared `clientId` works for CR url.
+
 ## Partners Name
 The partner name's come from S3 folder name. Example:
 * kleine zeitung : 
