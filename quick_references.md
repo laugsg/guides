@@ -68,7 +68,7 @@ sudo apt-get install git -y
 
 ### Cupo Reborn Missing packages
 1. npm install -g typescript
-
+2. sudo apt install awscli
 ```
 npm install -g typescript
 ```
