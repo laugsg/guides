@@ -10,6 +10,10 @@ Push to branch: `origin [branch]`
 * remove last 2 commit : `git reset --hard HEAD~2`
 * remove last n commit : `git reset --hard HEAD~n`
 
+## Pull a Branch into a Branch
+* `git pull [branch]:[branch]`
+* `git fetch --all`
+
 ## Pull Request Style
 * `https://cuponation.atlassian.net/wiki/spaces/OPE/pages/5983076355/How+do+we+git+commit`
 

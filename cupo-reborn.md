@@ -36,3 +36,16 @@ Brief description for issues resolution.
     1. It's positioned relative to the nearest positioned ancestor.
     2. It's removed from the normal flow.
     3. > the ancestor needs a height to be respected.
+
+```
+@media screen and (min-width: 1024px) {
+  #ve-header-desktop {
+    height: 133px; /*varies*/
+  }
+}
+@media screen and (max-width: 1024px) {
+  #ve-header-desktop {
+    height: 48px;
+  }
+}
+```
