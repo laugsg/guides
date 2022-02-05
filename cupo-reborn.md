@@ -1,6 +1,10 @@
 # CR notes for development
 Setup and run.
 
+## Good to know
+~~To load **legacy resources** like `header-desktop&mobile` **It must be loaded together** with `footer-desktop&mobile`.~~
+
+
 ## Partners id
 For now, shared `clientId` works for CR url.
 
