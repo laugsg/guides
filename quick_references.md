@@ -9,6 +9,7 @@ Push to branch: `origin [branch]`
 * remove last commit : `git reset --hard HEAD^`
 * remove last 2 commit : `git reset --hard HEAD~2`
 * remove last n commit : `git reset --hard HEAD~n`
+* remove specific commit : `git reset --hard [sha1-commit-id]^`
 
 ## Pull a Branch into a Branch
 * `git pull [branch]:[branch]`
