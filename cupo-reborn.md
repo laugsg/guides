@@ -2,7 +2,9 @@
 Setup and run.
 
 ## Good to know
-~~To load **legacy resources** like `header-desktop&mobile` **It must be loaded together** with `footer-desktop&mobile`.~~
+To load **legacy resources** like `header-desktop&mobile` **It must be loaded together** with `footer-desktop&mobile`.
+
+This means that It's not possible to load just only one legacy resource like or headerMobileResource or footerMobileResource. Both have to be loaded to be displayed into the page.
 
 
 ## Partners id
