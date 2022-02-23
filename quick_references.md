@@ -60,7 +60,9 @@ docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)
 docker rmi $(docker images -a -q)
 ```
 
-### How-To : update Git
+### How-To : 
+
+##### update Git
 Get tehe lastest official package source from official `https://launchpad.net/~git-core/+archive/ubuntu/ppa`
 ```
 # get lastest official source
@@ -70,6 +72,22 @@ sudo apt-get update
 # re-run installation
 sudo apt-get install git -y
 ```
+
+##### remove files from repo
+```
+git rm [path/to/file]
+```
+
+### Run & Load changes into adminpanel_pmt
+Each changes needs an install + link 
+```
+> code changes
+npm install
+npm link
+> the changes has been integrated
+```
+##### Console Logs
+Console logs are introduced into src/ typescript files, then they are visible in the terminal logs from where cupo-cuponing is running. So, the cosole logs into adminpanel_pmt are visible in cupo-cuponing (in the terminal that loads the cupo-cuponing repository)
 
 ### Cupo Reborn Missing packages
 1. npm install -g typescript

@@ -144,3 +144,23 @@ This means that White Labels themes represent precisly that: a white label or co
 
 # Affected By Legacy
 Some paths or data could be Affected By Legacy (AffByLeg) documentation.
+
+# Run Cupo in Mac
+it have to have .npmrc file
+1. source .env
+2. npx gulp build-envs
+3. docker-compose down && docker-compose up
+- in another window
+  1. aws credentials
+  2. export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain fe-acceptance-codeartifact-domain --domain-owner 103057822433 --query authorizationToken --output text`
+  3. npm run serve
+
+**path**
+
+localhost/[clientid]
+
+
+# .npmrc file
+registry=https://fe-acceptance-codeartifact-domain-103057822433.d.codeartifact.eu-west-1.amazonaws.com/npm/fe-acceptance-codeartifact-npm-repository/
+//fe-acceptance-codeartifact-domain-103057822433.d.codeartifact.eu-west-1.amazonaws.com/npm/fe-acceptance-codeartifact-npm-repository/:always-auth=true
+//fe-acceptance-codeartifact-domain-103057822433.d.codeartifact.eu-west-1.amazonaws.com/npm/fe-acceptance-codeartifact-npm-repository/:_authToken=${CODEARTIFACT_AUTH_TOKEN}
