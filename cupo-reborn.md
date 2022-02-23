@@ -2,10 +2,12 @@
 Setup and run.
 
 ## Good to know
+> legacy resources must be loaded together and cant be falsy (from `''` to `'1'`)
 To load **legacy resources** like `header-desktop&mobile` **It must be loaded together** with `footer-desktop&mobile`.
 
 This means that It's not possible to load just only one legacy resource like or headerMobileResource or footerMobileResource. Both have to be loaded to be displayed into the page.
 
+Even It can't have falsy values like empty strings, this means that have to be loaded both and at least with a truty value like `'1'`
 
 ## Partners id
 For now, shared `clientId` works for CR url.
