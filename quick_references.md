@@ -2,18 +2,6 @@
 Fixed commit message structure : `fix([ticket]): [text]`
 * ie : `fix(CPT-1645): Lexpress underline not visible`
 
-Push to branch: `origin [branch]`
-* ie : `git push origin CPT-1645`
-
-### Remove Commits
-* remove last commit : `git reset --hard HEAD^`
-* remove last 2 commit : `git reset --hard HEAD~2`
-* remove last n commit : `git reset --hard HEAD~n`
-* remove specific commit : `git reset --hard [sha1-commit-id]^`
-
-## Pull a Branch into a Branch
-* `git pull [branch]:[branch]`
-* `git fetch --all`
 
 ## Pull Request Style
 * `https://cuponation.atlassian.net/wiki/spaces/OPE/pages/5983076355/How+do+we+git+commit`
@@ -60,23 +48,13 @@ docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)
 docker rmi $(docker images -a -q)
 ```
 
+### cupo > dd-master : Dockerfile mongodb-org fails
+32-bit system repostories is empty (hence why it is not found). One solution is to run another repo for MongoDD
+```
+sudo apt-get install -y mongodb 
+```
+
 ### How-To : 
-
-##### update Git
-Get tehe lastest official package source from official `https://launchpad.net/~git-core/+archive/ubuntu/ppa`
-```
-# get lastest official source
-sudo add-apt-repository ppa:git-core/ppa
-# update sistem
-sudo apt-get update
-# re-run installation
-sudo apt-get install git -y
-```
-
-##### remove files from repo
-```
-git rm [path/to/file]
-```
 
 ### Run & Load changes into adminpanel_pmt
 Each changes needs an install + link 
