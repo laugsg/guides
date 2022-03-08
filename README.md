@@ -7,3 +7,4 @@ Details about procedures and shape of technology. Commonly answers about "How-to
 4. [How-to setup & run Cupo repos](nvm_mindset.md)
 5. [VEE & Cupo](vee-cupo.md) : Landscape Overview
 6. [Cupo Reborn](cupo-reborn.md)
+6. [DynamoDB Cache](dynamodb-cache.md)
