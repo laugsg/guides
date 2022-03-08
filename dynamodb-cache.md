@@ -10,7 +10,7 @@ In order to see latest updates, it's needed to **force a new entry with latest d
 ## 1. Force a new entry
 There is a route to regenerate the data, this is to **force a new entry into DynamoDB in order to serve latest resource changes**.
 * GET https://l149k3e9d8.execute-api.eu-west-1.amazonaws.com/acceptance/generate-ve/[partner-id]/[element]
-  * e.g : https://l149k3e9d8.../8cc8ab53af4267041c949848276c37d7/header
+  * e.g : `https://l149k3e9d8.../8cc8ab53af4267041c949848276c37d7/header`
 
 ## 2. Clear Cache
 There is a route to clear cache on template api gateway for DynamoDB (template table) `jkp-acceptance-template`
@@ -27,7 +27,8 @@ There is a route to clear cache on template api gateway for DynamoDB (template t
    * check the entry for the resource
      * https://acceptance.gateway.jakop.cloud/template-acceptance/template/client/[partner-id]/types/[element]
      * this address is built with data from cupo-cuponing repo at > `cupo/app/core/helpers/shadow-dom/[partner]` mergin both `getaFixUrl` for the target environment, specifying the element at the end.
-     * ![resource-entry](resource-entry.png)
+     ![final-url](final-url.png)
+     * timestamp : ![resource-entry](resource-entry.png)
 3. S3 bucket (changes for VEE resources must be into content.html for `partner/[resource-type]/staging/content.html`) https://s3.console.aws.amazon.com/s3/buckets/wl-acceptance-vee-crawler?region=eu-central-1&tab=objects#
 
 
