@@ -18,11 +18,16 @@ There is a route to clear cache on template api gateway for DynamoDB (template t
 
 
 ## Optional : aditional Checks
-1. check the entry for the resource
-   * https://acceptance.gateway.jakop.cloud/template-acceptance/template/client/[partner-id]/types/[element]
-   * this address is built with data from cupo-cuponing repo at > `cupo/app/core/helpers/shadow-dom/[partner]` mergin both `getaFixUrl` for the target environment, specifying the element at the end.
-2. check lambdas (the right lambda is operating)
-   * https://`l149k3e9d8`.execute-api...
+2. check lambda execution
+   * Lambda ID : https://`l149k3e9d8`.execute-api...
+   * Table : ![lambda](resources-lambda.png)
+   * Lambda execution
+     * ![lambdas](lambdas.png)
+     * ![Cloud Watch](cloud-watch.png)
+   * check the entry for the resource
+     * https://acceptance.gateway.jakop.cloud/template-acceptance/template/client/[partner-id]/types/[element]
+     * this address is built with data from cupo-cuponing repo at > `cupo/app/core/helpers/shadow-dom/[partner]` mergin both `getaFixUrl` for the target environment, specifying the element at the end.
+     * ![resource-entry](resource-entry.png)
 3. S3 bucket (changes for VEE resources must be into content.html for `partner/[resource-type]/staging/content.html`) https://s3.console.aws.amazon.com/s3/buckets/wl-acceptance-vee-crawler?region=eu-central-1&tab=objects#
 
 
