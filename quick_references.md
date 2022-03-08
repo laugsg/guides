@@ -54,7 +54,14 @@ docker rmi $(docker images -a -q)
 sudo apt-get install -y mongodb 
 ```
 
-### How-To : 
+### dd-master in Mac
+The `APPSYNC_HOST` and `APPSYNC_API_KEY` variables in .env file needs to be exported as :
+```
+export APPSYNC_HOST="mtysko5xzfgbhkbemfg24p3b7a.appsync-api.eu-west-1.amazonaws.com"                                         
+export APPSYNC_API_KEY="da2-cbh2ocjffje2rpeugr46con4sa"
+```
+
+## How-To : 
 
 ### Run & Load changes into adminpanel_pmt
 Each changes needs an install + link 

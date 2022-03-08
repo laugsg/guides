@@ -38,10 +38,9 @@ sudo apt-get install git -y
 
 
 
-## remove files from repo
-```
-git rm [path/to/file]
-```
+## remove files 
+1. from repo `git rm [path/to/file]`
+2. from repo cache `git rm [-r (recursive to folders)] --cache [file]`
 
 
 
