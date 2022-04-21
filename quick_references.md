@@ -1,3 +1,11 @@
+## AppSync & adminpanel_pmt
+Router partners are not yet migrated to AppSync technology, It does work into dd-master partners only. It becomes a node_module parckage named `gsg-data-service` where It's possible to add console.log's that mimic the AppSync needs (it's possible to extract AppSync examples)
+
+### adminpanel_pmt
+adminpanel_pmt is a node_module from us, It works as 'intermediary' controller layer that receives partner data that flow between AP and Cupo.
+
+To edit the module, go to adminpanel_pmt, then `npm link`, then into dd-cupo `npm link gsg-data-service`
+
 ## Commit Style
 Fixed commit message structure : `fix([ticket]): [text]`
 * ie : `fix(CPT-1645): Lexpress underline not visible`

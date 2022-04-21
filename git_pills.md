@@ -10,6 +10,12 @@
 
 
 
+### Remove untracked files
+* see which files will be deleted : `git clean -n`
+* Remove untracked files : `git clean -f`
+
+
+
 ## Pull a Branch into a Branch
 * `git pull [branch]:[branch]`
 * `git fetch --all`
