@@ -19,6 +19,10 @@
 3. npx gulp build-envs
 4. npm run serve
 
+```
+source .env && docker-compose down && docker-compose up -d && npx gulp build-envs && npm run serve
+```
+
 VPN
 
 **path**

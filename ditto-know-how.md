@@ -1,9 +1,11 @@
 # Ditto know-how
+
 https://ditto.gsg.pub/
 
 Ditto is a command line tool and visual inspector that replicate the partner's headers and footers.
 
 ## Features
+
 1. crawler
    1. crawl : simple crawler that target a url and a selector to return a html.
    2. crawl-from-json : provide a config json file with instructions about target url, actions and elements to an AWS service that do the crawling and returns an html.
@@ -15,6 +17,18 @@ Ditto is a command line tool and visual inspector that replicate the partner's h
    1. implementation
    2. comparisor
 
+## Deployment: Develop (Staging) / Master (Production)
+
+Ditto has two main branches which build the resources that would be display into the partner site. The process is about 4 (four) files and 1 (one) PR to each branch.
+
+### Develop (Staging)
+
+The most common workflow starts in local, Ditto currently is not an online editor.
+
+1. Create a branch from `develop`
+2. Create a `demo.config.json` at partner root folder. See [Theming](#theming)
+3. Create and execute `build.sh`. See [build.sh](#buildsh)
+4. PR to develop, changes must be
 
 ## Architecture and code decisions
 
@@ -29,14 +43,39 @@ Ditto is a command line tool and visual inspector that replicate the partner's h
 3. normalize.css to prevent from browsers default styles
 
 ## Libraries
+
 1. Bundler: https://webpack.js.org/
 2. Library to translate new JS to ES5 prior: https://babeljs.io/
 3. Toast notifications: https://www.npmjs.com/package/react-toastify
 4. Library to easily get the dimensions of the viewer: https://www.npmjs.com/package/react-resize-aware
 5. Library for center, zoom, among other functionalities in the viewer: https://www.npmjs.com/package/react-zoom-pan-pinch
 
+# build.sh
+
+`/[partner]/build.sh`
+
+1.  Create a `build.sh` at partner root folder and give it execution permissions `chmod a+x build.sh`
+2.  Rename the other partners `build.sh` to `build.skip.sh`, this allow Ditto to build just the resources needed. Allowing a long term stability, avoiding unspected resources crashes, and to use less external services-resources.
+3.  Set the actions to be done by Ditto or System into `build.sh` (gsg-ditto replace ... / cp header-desktop dist/...). Redirect the output of actions/commands to `dist/` folder. 
+4.  Execute `build.sh` (a HTML resource must be created into `dist/`).
+
+```
+# example 1:
+cp header-desktop.html dist/header-desktop.html
+
+# example 2:
+ditto replace -p "#page-container" "${SUBFOLDER}/styles.html" "${TMP_HTML}" -o "${OUTPUT_PATH}"
+ditto replace -a "#page-container" "${SUBFOLDER}/script-sidebar.html" "${TMP_HTML}" -o "${OUTPUT_PATH}"
+ditto replace ".h1-page-last-updated" "${SUBFOLDER}/h1-page-last-updated.html" "${TMP_HTML}" -o "${OUTPUT_PATH}"
+ditto replace ".logo-de ul li h1" "${SUBFOLDER}/logo-de.html" "${TMP_HTML}" -o "${OUTPUT_PATH}"
+ditto replace ".masthead-map" "${SUBFOLDER}/masthead-map.html" "${TMP_HTML}" -o "${OUTPUT_PATH}"
+ditto replace -a "#page-container" "${SUBFOLDER}/page-container1.html" "${TMP_HTML}" -o "${OUTPUT_PATH}"
+ditto replace -a "#page-container" "${SUBFOLDER}/page-container2.html" "${TMP_HTML}" -o "${OUTPUT_PATH}"
+```
+
 # Theming
-`/partners/focus/demo.config.json`
+
+`/[partner]/demo.config.json`
 
 ```
 {
@@ -76,9 +115,10 @@ name | string | Displayed name in the menu of the viewer
 header | string | Resource name (excluding extension and path)
 footer | string | Resource name (excluding extension and path)
 
-
 # Design System Integration to use real page components
+
 The content of the viewer is currently using an image to simulate partners pages. To have a real representation of the resource, the content of the viewer could be modifyed. React components are injected directly in the iframe of the viewer as the same way of importing resources in Reborn.
+
 ```
 // Viewer.jsx
 <div
@@ -91,13 +131,13 @@ The content of the viewer is currently using an image to simulate partners pages
 >
   {/* normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */}
   <div dangerouslySetInnerHTML={{ __html: normalizeCss }}></div>
-  
+
   {headerHtml && <div dangerouslySetInnerHTML={{ __html: headerHtml }}></div>}
-  
+
   // -----------------------------------
   // the content will be here!
   // -----------------------------------
-  
+
   {footerHtml && <div dangerouslySetInnerHTML={{ __html: footerHtml }}></div>}
 </div>
 ```
@@ -105,17 +145,23 @@ The content of the viewer is currently using an image to simulate partners pages
 # Challenges
 
 ## Avoid Cache: see current changes
+
 #### Problem: Browser cache
+
 Files change but their names does not, HTTP requests are routed to browser cache before been sent which it's used if there is a valid cached resource to fulfill the request. Then, changes becomes harder to be tested.
+
 #### Solution: Files hash names
+
 Giving new hash filenames at each build to those files that were changed to request a new file after each modification. Then, the same filename is never requested in the cache.
 
-This is a great article that explains how this works in detail: https://web.dev/http-cache/ 
+This is a great article that explains how this works in detail: https://web.dev/http-cache/
 
 ## different resolutions
-how the resources will be display in different resolutions using their media queries and not the ones of the demo? With iframes, passing either a normal URL or React components as strings using the attribute srcdoc. Then, each different DOMs could have its own media queries to use different devices when the user change the view mode. 
+
+how the resources will be display in different resolutions using their media queries and not the ones of the demo? With iframes, passing either a normal URL or React components as strings using the attribute srcdoc. Then, each different DOMs could have its own media queries to use different devices when the user change the view mode.
 
 ### Cautions of using Frame in React
+
 There is a main issue injecting React into iframes, the styles. As the iframe has their own DOM, It's not possible to use any class of the demo or the injected component.  It is totally isolated.
 
 Inline CSS for the component to be injected in the viewer solve this problem. This is not an issue for the resources because they all have their styles inside them, but this has to be taken into consideration for future integrations with more complex components.
