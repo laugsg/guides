@@ -1,3 +1,16 @@
+## Inverse Indent with Visual Studio
+`Shift + Tab`
+
+## macos - How do I find a file by filename in Mac OSX terminal?
+```
+find ./ -name build.sh
+```
+* Structure
+  1. find (the program)
+  2. ./ (the path - here is set to current location), and
+  3. -name [filename.extention] (the criteria).
+* find ./ -name build.sh
+
 ## AppSync & adminpanel_pmt
 Router partners are not yet migrated to AppSync technology, It does work into dd-master partners only. It becomes a node_module parckage named `gsg-data-service` where It's possible to add console.log's that mimic the AppSync needs (it's possible to extract AppSync examples)
 
