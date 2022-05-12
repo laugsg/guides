@@ -2,11 +2,11 @@
 New Global Navigation (which is CPT-1676) is a replacement of Old Global Navigation (avoid known bugs & clear structure).
 
 Is New Global Navigation (which is CPT-1676) finished? No.
-
 ## Tasks to finish
 Things left:
-1. Views:
-   1. Children items
+1. Views
+   1. Parent
+   2. Children
 
 2. Validations
    1. Form
@@ -18,9 +18,18 @@ Things left:
     1. CRUD Server Data
     2. Front-End elements CRUD
 
-## 1. Child **
-Child ---> Needs a View buit from Labels and Inputs HTML elements & Validation
-
+## 1. Views
+* Parent items
+   1. [x] Parent Element
+   2. [ ] Create Parent Item Dialog
+   3. [ ] Parent Edit Dialog 
+   4. [ ] Parent Remove Dialog 
+   5. [x] Parent Open: Parent Body
+* Children items
+   1. [ ] Children Element --> Image icon
+   2. [ ] Create Children Item Dialog
+   3. [ ] Children Edit Dialog 
+   4. [ ] Children Remove Dialog 
 
 ## 2. Validation
 
@@ -36,8 +45,8 @@ Child ---> Needs a View buit from Labels and Inputs HTML elements & Validation
             4. Retailers
             5. Article
       2. Content Type (defined by Server Data from each partner)
-      3. [ x ] Title 
-      4. [ x ] URL
+      3. [x] Title 
+      4. [x] URL
       5. The "Add items to the dropdown" takes Retailes from Server Data
       6. Show "See all" button & With images : Should be visible for All the Content Types
    
@@ -57,7 +66,8 @@ Child ---> Needs a View buit from Labels and Inputs HTML elements & Validation
    1. Parent 
       1. Type of Item > Vertical Dropdown enables Content Type defined by Server Data from each partner
       2. The "Add items to the dropdown" takes Retailes from Server Data
-
+* Location: 
+    1. Image boolean/string to display text message if image exist or doesn't exist
 
 ## 4. CRUD Actions
 1. Front-End
@@ -89,15 +99,39 @@ Child ---> Needs a View buit from Labels and Inputs HTML elements & Validation
 
 # Make a Plan
 1. We need to reproduce the installation method that the current Global Navigation uses to be installed into Admin Panel (Is GlobalNav a Module/Dependency?)
-2. Replace Dummy Data with Real Server Data
-3. Make Views
+2. Leave the Global Navigation StandAlone environment
+3. Replace Dummy Data with Real Server Data
+4. Make Views
    1. Main View
-   2. Children Views as 
-      1. Dialogs, 
+   2. Parent & Children
+      1. Dialogs Views
       2. Atomic Elements Views
-4. Validation as Library of requirements
-5. CRUDs
+5. Validation as Library of requirements
+6. CRUDs
    1. Server Data API
    2. Asynchronous Calls from Front-End
       1. Load inital Data
       2. Handle Front-End Elements based in responses
+
+
+
+
+
+
+
+# Where we are now?
+1. Waiting for Andy 
+   * Andy said he will talk with a Senior Angular Dev to help us.
+2. We have a splitted Project, we need to (from "Make Plan" tasks 1, 2, 3)
+   1. Unify our Project
+   2. Install it in Admin Panel
+   3. Get Data from Admin Panel inside our Project
+3. We need to complete Views, Front-End and Server Data functionalities 
+
+
+
+
+
+
+# Vocabulary
+1. Dialog: Angular Material Component like a Popup or Modal and it also can pass values and data
