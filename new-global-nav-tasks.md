@@ -98,8 +98,8 @@ Things left:
 
 
 # Make a Plan
-1. We need to reproduce the installation method that the current Global Navigation uses to be installed into Admin Panel (Is GlobalNav a Module/Dependency?)
-2. Leave the Global Navigation StandAlone environment
+1. [x] We need to reproduce the installation method that the current Global Navigation uses to be installed into Admin Panel (Is GlobalNav a Module/Dependency?) ----------> **_as a regular Angular Component_**
+2. [x] Leave the Global Navigation StandAlone environment ----------> **_It's a regular Angular Component, there is no need of special environment_**
 3. Replace Dummy Data with Real Server Data
 4. Make Views
    1. Main View
@@ -131,6 +131,8 @@ Things left:
 
 
 
+# Spike
+1. [Creating Node.js modules](https://docs.npmjs.com/creating-node-js-modules)
 
 
 # Vocabulary
