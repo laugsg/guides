@@ -1,27 +1,18 @@
 # How-To: Install & Run
 Reborn project is simple to install and run, it just need Node or NVM, Git, AWS, Typescript CLI and Yarn.
 
-# 1. Install
-asd
+## 0. Prerequisites & Dependencies
 
-## Prerequisites
-
-1. [Node](https://nodejs.org/en/download/) or [NVM](https://github.com/nvm-sh/nvm) > v14
-2. [Git](https://git-scm.com/downloads) > 2.30
-3. [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-version.html)
-4. Modify the `~/.aws/config` file in the root folder
+2. [Node](https://nodejs.org/en/download/) or [NVM](https://github.com/nvm-sh/nvm) > v14
+3. [Git](https://git-scm.com/downloads) > 2.30
+4. [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-version.html)
+5. Modify the `~/.aws/config` file in the root folder
     ```
     [default]
     output = json
     region = eu-west-1
     ```
-5. Get Reborn Project Locally
-   ```
-   git clone git@bitbucket.org:global-savings-group/cupo-reborn.git
-   ```
 
-
-## Dependencies
 This project makes use of "tsc" command which is provided by the Typescript CLI. To enable this we need to install typescript as a global package:
 ```
 npm install -g typescript
@@ -32,12 +23,11 @@ Yarn is widely used along this project. To enable this we need to install it as 
 npm install -g yarn
 ```
 
+# 1. Install
 
-# 2. Run
-
-1. Change directory to Reborn local project folder and install all the dependencies
+1. Get Reborn Project Locally
    ```
-   npm install
+   git clone git@bitbucket.org:global-savings-group/cupo-reborn.git
    ```
 
 2. Some of the dependencies are read from CodeArtifact as private npm registry. To enable this we need to create a `.npmrc` file in the root folder of the local Reborn project with the following content:
@@ -56,12 +46,22 @@ npm install -g yarn
    6. Hover "Option 1: Set AWS environment variables" then Click to Copy
    7. Paste into a terminal the copied Credentials.
 
-4. Copy/Paste into a terminal and execute the following command:
+4. Copy/Paste/execute into a terminal the following export:
     ```
     export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain fe-acceptance-codeartifact-domain --domain-owner 103057822433 --query authorizationToken --output text`
     ```
 
-5. Execute in the terminal `yarn dev` to run the project
+5. Change directory to Reborn local project folder and install all the dependencies
+   ```
+   npm install
+   ```
+
+
+
+# 2. Run : `yarn dev`
+Once installed, execute `yarn dev` to run the project.
+
+
 
 
 # 3. Use Reborn to See Partners Front-End
