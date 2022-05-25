@@ -82,9 +82,9 @@ An example structure of an URL would be as follows:
   * `http://localhost:3000` : Reborn runs at localhost
   * `/v4c...e72` : Partner ID
   * `/rlp` : Page Type
-  * `/amazon` : Retailer
+  * `/retailer` : Retailer
 * then, complete url would be 
-  * `http://localhost:3000/v4c...e72/rlp/amazon`
+  * `http://localhost:3000/v4c...e72/rlp/retailer`
 
 
 
@@ -98,3 +98,8 @@ An example structure of an URL would be as follows:
 
 -   If you want to analyze the build librares and how they are organized use this command
     `npm run analyze`
+
+# `export` in Windows environment 
+
+In Windows Command Prompt environment translate `export` to `set` or `SET`.
+
