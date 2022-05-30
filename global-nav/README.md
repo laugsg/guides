@@ -51,7 +51,7 @@ Now we can see how the data is used by finding those files which implements `glo
 
 
 # Components Entry Point
-The basic entry point for UI is `basic-layout.component.ts`
+The basic entry point for UI is `basic-layout.component.ts`. Data falls through to children as inherited properties within html components.
 
 Imports `GlobalNavService` Class getting all their properties and methods to be able to do Mayor and Minor CRUD operations.
 
@@ -59,39 +59,53 @@ Mayor CRUD operations directly targets the Database as `saveAllMenu` like POST (
 
 Minor CRUD operations manipulates data within the App level as helpers to perform crud operations over local data objects like properties, to be finally taken into mayor operations on further moments.
 
+## Basic Layout Class
+
+1. ngOnInit() : Pass Menu data before the view is rendered.
+2. Imports GlobalNavService
+3. Get Menu data : this.globalNavService.getAllMenuItems()
+4. Assign Menu data to property (menuAll$) : this.globalNavService.menuAllObservable
 
 
-
-
-
-
-
-
-
-## OLD: Legacy Documentation
-The basic entry point for UI is `basic-layout.component.ts`
-```
-@Component({
-  selector: 'app-basic-layout',
-  templateUrl: 'basic-layout.component.html',
-  styleUrls: ['basic-layout.component.scss'],
-  encapsulation: ViewEncapsulation.None,
-})
-```
+## Shell : basic-layout.component.html
 
 Along `basic-layout.component.html` sub-components are implemented:
+
 1. `<app-first-page (changeEditMode)="createItem()"></app-first-page>`
+      1. Display the green button to create an Item if
+         1. menuAll$ was initialized and declared empty array
+         2. touched is equal to false
+         3. loading is equal to false
+
 2. `<app-menu-list [menuAll]="menuAll$" [maxDepth]="maxDepth" [menuIsChanged]="menuIsChanged">`
+
+      1. It receives server the data to be render
+         1. [menuAll]="menuAll$"
+         2. [maxDepth]="maxDepth"
+         3. [menuIsChanged]="menuIsChanged"
+
 3. `<app-card-form></app-card-form>`
 
-## menu-list.component
-1. checkFormValidation()
-   1. import { MenuItem } from '../types';
-   2. menuAll: MenuItem[]
-   3. checkItemIsValid(item)
+      1. Card form used to Create/Edit item shown as a grey square at right
 
 
+## app-first-page View : No Global Nav Items
+`<app-first-page>` it's an image and a button that calls `createNewRootMenuItem()` class method
 
+## app-menu-list View : Global Nav Items
+`<app-menu-list>` is the parent of small children views. It's the Outer or Shell View to lower atomic elements as rows and buttons to Create/Cancel/Save changes.
+
+The `<app-menu-list [menuAll]="menuAll$" [maxDepth]="maxDepth" [menuIsChanged]="menuIsChanged">` component implements children views as:
+
+1. Buttons
+2. __*ngFor into a li as host__ to loop over 'menu of menuAll'
+3. `<app-menu-item>`
+      1. [menuItemData]="menu"
+      2. [currentDepth]="0"
+      3. [maxDepth]="maxDepth"
+      4. [indexInParent]="idx"
+      5. (childDragged)="childDraggedHandler($event, idx)"
+      6. (itemDeleted)="logger($event)"
 
 
 

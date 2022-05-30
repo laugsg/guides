@@ -127,9 +127,3 @@ Data Delivery (Migrated) | Router (Not yet Migrated) |
       1. aws configure
       2. SSO credentials copy/paste
       3. aws configure sso (URL personio AWS SSO front-end)
-2. issue: npm install > Error while executing: /usr/bin/git ls-remote -h -t git://github.com/adobe-webplatform/eve.git (npm error code: 128)
-      1. `npm i eve`
-3. issue: npm install > Command failed: git clone --mirror -q git://github.com/neilj/Squire.git (npm error code: 128)
-      1. git config --local url."https://".insteadOf git://
-4. issue: npm install > Error while executing: /usr/bin/git ls-remote -h -t https://github.com/AdminJuwel191/switchery.git
-      1. switchery: remove it from package.json, install it as `npm i switchery`, run again `npm i`
