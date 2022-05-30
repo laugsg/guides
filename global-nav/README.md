@@ -113,6 +113,16 @@ The `<app-menu-list [menuAll]="menuAll$" [maxDepth]="maxDepth" [menuIsChanged]="
 
 
 
+# Conclusion
+Now, just Cuponation ES is getting data it doesn't belongs to it. Global Nav is using the right client ID but server returns FocusDE data.
+
+So, because this, the error where data is been misplacing has not to be Global Nav.
+
+![Right id - Wrong data](readme-assets/right-id-wrong-data.png)
+
+Log about the resul of the request.
+![Request result log](readme-assets/log-request.png)
+
 
 
 
