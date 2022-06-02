@@ -24,3 +24,13 @@ A map, which narrates an explanation of it shape and behaviour, to help the read
   * 1. interviews
   * 2. refinement informarion from interviews
   * 3. Corpus Data : state technical description and narrative
+
+
+# Process
+* Narrative
+    1. global view of the system
+    2. components responsabilities
+    3. how components relates between them
+          1. as where the first process start
+          2. as how data flows from one component to the other
+          3. as inputs they receive, tasks they do, output they give, which component receives it or at the end how is it the system final result.
