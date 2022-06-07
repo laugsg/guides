@@ -51,13 +51,6 @@ Previous landscape
 4. [ ] time-effort : implement sprinkles into a react component
 
 
-New landscape
-
-* [x] Contracts and Themes in Sprinkles
-* [ ] vanilla-extract recipesAPI
-* [ ] connect with design system
-
-
 
 
 
