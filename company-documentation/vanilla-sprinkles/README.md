@@ -7,8 +7,8 @@
 1. [x] [Introduction](intro.md)
 2. [x] [Contracts](contracts.md)
 3. [x] [A library with Sprinkles](library-with-Sprinkles.md)
-4. [ ] [Themes Variations](themes-variations.md)
-5. [ ] [recipes API](recipes-API.md)
+<!-- 4. [ ] [Themes Variations](themes-variations.md) -->
+<!-- 5. [ ] [recipes API](recipes-API.md) -->
 6. Examples
       1. [x] [vanilla-extract Contracts](examples/vanilla-extract-Contracts/README.md)
       2. [ ] [Move vanilla-extract Contracts to Sprinkles](examples/move-Contracts-to-Sprinkles/README.md)
