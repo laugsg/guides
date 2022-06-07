@@ -17,7 +17,7 @@ A style file works to define how contract connect with css properties, then it's
 Process :
 1. define how the Contract is it
 2. define how the Theme implements the contract
-3. define how the Style is based in which css property is defined by each contract value.
+3. define how the Style is it based in which css property is defined by each contract value.
 4. import the Theme into the component
 5. import Style Definition
 6. Place the Theme as parent wrapper

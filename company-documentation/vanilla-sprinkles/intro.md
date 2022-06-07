@@ -9,13 +9,14 @@ This is especially useful to define a theme or variations of it, contracts allow
 
 ## Why Sprinkles
 
-All styles are generated at build time for better performance.
+[Sprinkles](https://www.npmjs.com/package/@vanilla-extract/sprinkles) is a feature of vanilla-extract package that generate styles statically at build time. In a one-to-one comparison, server-side components tend to perform better.
 
-Sprinkles also use vanilla-extract features as 
+All styles generated at build time has better performance than styles dynamically generated at runtime.
+
+Sprinkles also use vanilla-extract features as:
+
 * themes : to configure themed values
 * contracts : to configure themes based on them
-
-
 
 
 
