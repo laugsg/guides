@@ -1,26 +1,16 @@
 # vanilla-extract : css-in-js patterns
 
-CSS-in-JS libraries tackle the limitations of CSS, vanilla-extract let define contracts to ensure that requirements are met.
-
-This is especially useful to define a theme or variations of it, contracts allows to define the requirements a theme must met becoming extremely clear which values their variations should customize.
-
-> A contract is a js object where key-value pairs are equal to class names (key) and rules (value).
 
 
-## Why Sprinkles
 
-All styles are generated at build time for better performance.
-
-Sprinkles also use vanilla-extract features as 
-* themes : to configure themed values
-* contracts : to configure themes based on them
+## Index
+1. [Introduction](intro.md)
+1. [Contracts](contracts.md)
+2. [A library with Sprinkles](library-with-Sprinkles.md)
 
 
-# How-To Library with Sprinkles
 
-A library minimal expression is _just a CSS file_ with definitions for classes and elements.
 
-Let assume that everything about contracts and definitions are already done.
 
 
 ## Minimal implementation
@@ -118,7 +108,6 @@ export const sprinkles = createSprinkles(
 ```
 
 
-## Contracts and Themes in Sprinkles
 
 
 
@@ -126,13 +115,29 @@ export const sprinkles = createSprinkles(
 
 
 
+---
+
+
+New landscape
+* time-effort : implement sprinkles into react component
+* Contracts and Themes in Sprinkles
+* vanilla-extract recipesAPI
+* connect with design system
+
+
+[update] Documentation requirements:
+1. sprinkles API : how it works and how to implement it
+2. time-effort : implement sprinkles into a react component
+3. recipes API : how it can be used as the utilities DS already have
+4. pairing/collate : how can theoretically a new library be an improvement of DS implementation for styles and classes
 
 
 
 
-
-
-
+1. vanilla-extract contracts
+2. from contracts to sprinkles
+3. sprinkles implementation
+4. recipes API
 
 
 

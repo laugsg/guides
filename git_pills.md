@@ -1,5 +1,21 @@
 # Git common solutions to daily issues
 
+### Git Revert
+revert is the command we use when we want to take a previous commit and add it as a new commit, keeping the log intact.
+* https://www.w3schools.com/git/git_revert.asp
+* https://www.atlassian.com/git/tutorials/undoing-changes/git-revert
+
+
+1. Step 1: Find the previous commit: 52418f
+2. Step 2: Use it to make a new commit: `git revert [commit-hash/HEAD^/~x] --no-edit`
+
+Revert using git `revert HEAD` or commit-hash, adding the option `--no-edit` to skip the commit message editor (getting the default revert message).
+
+To revert to earlier commits, use `git revert HEAD~x` (x being a number. 1 going back one more, 2 going back two more, etc.) or `git revert HEAD^` to revert the latest commit.
+
+
+
+
 
 ### Remove Commits
 * remove last commit : `git reset --hard HEAD^`
