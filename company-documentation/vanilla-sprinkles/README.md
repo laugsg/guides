@@ -35,11 +35,12 @@
 ---
 
 
-New landscape
+Previous landscape
 
-* [x] Contracts and Themes in Sprinkles
-* [ ] vanilla-extract recipesAPI
-* [ ] connect with design system
+5. [x] vanilla-extract contracts
+6. [x] from contracts to sprinkles
+7. [x] sprinkles implementation
+8. [ ] recipes API
 
 
 [update] Documentation requirements:
@@ -50,13 +51,11 @@ New landscape
 4. [ ] time-effort : implement sprinkles into a react component
 
 
+New landscape
 
-Previous landscape
-
-5. [x] vanilla-extract contracts
-6. [x] from contracts to sprinkles
-7. [x] sprinkles implementation
-8. [ ] recipes API
+* [x] Contracts and Themes in Sprinkles
+* [ ] vanilla-extract recipesAPI
+* [ ] connect with design system
 
 
 
