@@ -24,7 +24,7 @@ This project was create from scratch, first as HTML with React elements, finally
 - Vanilla-Extract
 
 1. Packages
-   * `npm i vanilla-extract/css @vanilla-extract/babel-plugin @vanilla-extract/next-plugin typescript @types/react @types/node @vanilla-extract/sprinkles`
+   * `npm i vanilla-extract/css @vanilla-extract/babel-plugin @vanilla-extract/next-plugin typescript @types/react @types/node @vanilla-extract/sprinkles @vanilla-extract/recipes`
    1. @vanilla-extract/css 
    2. @vanilla-extract/babel-plugin 
    3. @vanilla-extract/next-plugin
