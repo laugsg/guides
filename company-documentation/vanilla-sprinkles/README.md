@@ -12,9 +12,9 @@ Those values about spacing are already defined, then to take them to reuse them,
 2. [x] [Contracts](contracts.md)
 3. [x] [A library with Sprinkles](library-with-Sprinkles.md)
 4. [x] [Themes Variations](themes-variations.md)
-5. [x] recipes API
-6. [x] Conclusion
-7. [ ] [Proof of concept](https://nextreact-iota.vercel.app/)
+5. [x] [recipes API](recipes-API.md)
+6. [x] [Conclusion](#conclusions)
+7. [x] [Proof of concept](https://nextreact-iota.vercel.app/)
 8. Examples
    1. [x] [vanilla-extract Contracts](examples/vanilla-extract-Contracts/README.md)
    2. [x] [Move vanilla-extract Contracts to Sprinkles](examples/move-Contracts-to-Sprinkles/README.md)
