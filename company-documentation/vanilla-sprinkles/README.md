@@ -12,12 +12,13 @@ Those values about spacing are already defined, then to take them to reuse them,
 2. [x] [Contracts](contracts.md)
 3. [x] [A library with Sprinkles](library-with-Sprinkles.md)
 4. [x] [Themes Variations](themes-variations.md)
-5. [ ] recipes API
-6. [ ] Conclusion
+5. [x] recipes API
+6. [x] Conclusion
 7. [ ] [Proof of concept](https://nextreact-iota.vercel.app/)
 8. Examples
    1. [x] [vanilla-extract Contracts](examples/vanilla-extract-Contracts/README.md)
-   2. [ ] [Move vanilla-extract Contracts to Sprinkles](examples/move-Contracts-to-Sprinkles/README.md)
+   2. [x] [Move vanilla-extract Contracts to Sprinkles](examples/move-Contracts-to-Sprinkles/README.md)
+   3. [x] [Proof of concept](https://github.com/laugsg/nextreact)
 
 # Conclusions
 
@@ -42,11 +43,11 @@ As the contrary as the Contracts/Themes and values, reuse implementation methodo
 
 ## pairing/collate : A new library as improvement of DS spacing rules
 
-The complexity of this task due to the location of the values, at first glance It's not unpropertionally extense, and It looks as affordable. Even recommended, because there are some helpers of styles that could be eluded by just taking the values needed, creating a new contract and a new theme. Which could encrease performance.
+The complexity of this task due to the location of the values, at first glance It's not unpropertionally extense, and **It looks as affordable. Even recommended**, because there are some helpers of styles that could be eluded by just taking the values needed, creating a new contract and a new theme. Which could encrease performance.
 
-It's recommended to isolate this values related to spacing, which could be taken from partners themes where are the actual values saved. The previous implementation was designed originally for Material UI, this structures of code could be reused and, even more, improved by cleaning and curating that same data.
+It's recommended to isolate this values related to spacing, which could be taken from partners themes where are the actual values saved. The previous implementation was designed originally for Material UI, some of this structures of code could be reused and, even more, improved by cleaning and curating that same data and developing more efficent modes to deliver styles.
 
-Think to build a new library open to the opportunity to look foward, to build more efficient methods to delivery stlyes, to create specific contracts and themes, which allows to take advantage of it if an improvement or refactor of DS styling is taken.
+Think to build a new library open to the opportunity to look foward, to build more efficient methods to delivery stlyes, to create specific contracts and themes, which allows DS to take advantage of it for an improvement or refactor of styling.
 
 ---
 
@@ -63,12 +64,12 @@ Previous landscape
 1. [x] vanilla-extract contracts
 2. [x] from contracts to sprinkles
 3. [x] sprinkles implementation
-4. [ ] recipes API
+4. [x] recipes API
 
 [update] Documentation requirements:
 
 1. [x] sprinkles API : how it works and how to implement it
-2. [ ] recipes API : how it can be used as the utilities DS already have
+2. [x] recipes API : how it can be used as the utilities DS already have
 3. [x] pairing/collate : how can theoretically a new library be an improvement of DS implementation for styles and classes
 4. [x] time-effort : implement sprinkles into a react component
 
