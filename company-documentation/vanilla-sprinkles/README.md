@@ -21,14 +21,32 @@ Those values about spacing are already defined, then to take them to reuse them,
 
 # Conclusions
 
+Design System is a fabolous proyect. Looking back from the present, thanks to the experience gain from built it, an improvement related to contract/themes and how they are implemented is possible.
 
-Design System is a fabolous proyect. Looking back from the present, improvements related to contract/themes and how they are implemented is possible, thanks to the experience gain from built it.
+As recommendation, there are three areas to be improved at the moment of build a new library:
 
-It's recommended to isolate this values related to spacing, which could be taken from partners themes where are the actual values saved. The previous implementation was designed originally for Material UI, this structures of code could be reused and, even more, improved by cleaning and curating that same data.
+1. contract
+2. themes
+3. implementation
+
+## 1. & 2. Contracts, Themes and values
+
+Reuse contracts and themes to build a new library is not recommended as middle/long term sustanaible solution, since they were developed targeting a library that would be fully removed (Material UI). It's recommended to look at this as guide to build independent and specific contracts and themes. As the same as the implementation of them.
+
+Design System as a package that Cupo Reborn consumes, It's a module that could be found into `reborn/node_modules`, DS gives for each partner within their own theme every style rule as a flat primitives value. This allow to extract them ease and fast, ready to be delivered and ready to be consume.
+
+## 3. Implementation
+
+As the contrary as the Contracts/Themes and values, reuse implementation methodology is not possible and even not recommended. By one hand, to move to server side implies to use Sprinkles which needs a detailed mode of use being a different API, by the other hand, the way that the styles are delivered its not completely efficient due to, in some cases, introduce more styles than are consumed or whole themes target a root node.
+
 
 ## pairing/collate : A new library as improvement of DS spacing rules
 
-The complexity of this task due to the location of the values, at first glance It's not unpropertionally extense, and It looks as affordable. Even recommended, because there are some helpers of styles that could be eluded by just taking the values needed, creating a new contract and a new theme.
+The complexity of this task due to the location of the values, at first glance It's not unpropertionally extense, and It looks as affordable. Even recommended, because there are some helpers of styles that could be eluded by just taking the values needed, creating a new contract and a new theme. Which could encrease performance.
+
+It's recommended to isolate this values related to spacing, which could be taken from partners themes where are the actual values saved. The previous implementation was designed originally for Material UI, this structures of code could be reused and, even more, improved by cleaning and curating that same data.
+
+Think to build a new library open to the opportunity to look foward, to build more efficient methods to delivery stlyes, to create specific contracts and themes, which allows to take advantage of it if an improvement or refactor of DS styling is taken.
 
 ---
 
@@ -42,10 +60,10 @@ The complexity of this task due to the location of the values, at first glance I
 
 Previous landscape
 
-5. [x] vanilla-extract contracts
-6. [x] from contracts to sprinkles
-7. [x] sprinkles implementation
-8. [ ] recipes API
+1. [x] vanilla-extract contracts
+2. [x] from contracts to sprinkles
+3. [x] sprinkles implementation
+4. [ ] recipes API
 
 [update] Documentation requirements:
 
