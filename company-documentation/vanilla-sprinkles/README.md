@@ -34,7 +34,7 @@ As recommendation, there are three areas to be improved at the moment of build a
 
 Reuse contracts and themes to build a new library is not recommended as middle/long term sustanaible solution, since they were developed targeting a library that would be fully removed (Material UI). It's recommended to look at this as guide to build independent and specific contracts and themes. As the same as the implementation of them.
 
-Design System as a package that Cupo Reborn consumes, It's a module that could be found into `reborn/node_modules`, DS gives for each partner within their own theme every style rule as a flat primitives value at `ds/packages/styles/src/themes/` then `files:[partner].ts + common.ts`. This allow to extract them ease and fast, ready to be delivered and ready to be consume.
+Design System as a package that Cupo Reborn consumes, It's a module that could be found into `reborn/node_modules/@design-system/`, DS gives for each partner within their own theme every style rule as a flat primitives value at `ds/packages/styles/src/themes/` then `files:[partner].ts + common.ts`. This allow to extract them ease and fast, ready to be delivered and ready to be consume.
 
 ## 3. Implementation
 
